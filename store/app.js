@@ -14,16 +14,20 @@ export const state = () => ({
         href: 'https://github.com/Candy-Shop-One/CandyShop-web',
         label: 'Github',
       },
-      // {
-      //   href: '/',
-      //   label: 'Medium',
-      // },
+      {
+        href: 'https://discord.gg/KqJhzTmmZ6',
+        label: 'Discord',
+      },
       {
         href: 'https://twitter.com/0xCandyDapp',
         label: 'Twitter',
       },
       {
-        href: ' https://t.me/CandyDapp_community',
+        href: 'https://t.me/CandyDapp_community',
+        label: 'Telegram',
+      },
+      {
+        href: 'https://t.me/CandyDappAnn',
         label: 'Telegram',
       },
     ],
@@ -64,6 +68,10 @@ export const state = () => ({
         href: 'https://t.me/CandyDapp_community',
         icon: 'mono/telegram',
       },
+      {
+        href: 'https://t.me/CandyDappAnn',
+        icon: 'mono/telegram',
+      },
     ],
   },
   menuInterface: {
@@ -100,7 +108,7 @@ export const state = () => ({
         label: 'FAQ',
       },
       {
-        href: '/',
+        href: 'https://mirror.xyz/candydapp.eth',
         label: 'Blog',
       },
       {
@@ -218,26 +226,26 @@ export const mutations = {
     state.menuInterface.open = !state.menuInterface.open
   },
   PUSH_MODAL(state, modal) {
-    state.modals.push(modal);
+    state.modals.push(modal)
   },
   PUSH_MODALS(state, modals) {
-    state.modals = [...state.modals, ...modals];
+    state.modals = [...state.modals, ...modals]
   },
   CLOSE_ALL_MODALS(state) {
-    state.modals = [];
+    state.modals = []
   },
   CLOSE_MODAL(state) {
-    state.modals.pop();
+    state.modals.pop()
   },
-  SET_DATA_MODAL(state, {name, index, data}) {
-    const modals = state.modals;
+  SET_DATA_MODAL(state, { name, index, data }) {
+    const modals = state.modals
     for (let i = 0; i < modals.length; i++) {
       const modal = modals[i]
       if (modal.name === name && modal.index === index) {
         modal.data = data
       }
     }
-  }
+  },
 }
 
 export const getters = {
