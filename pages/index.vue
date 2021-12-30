@@ -516,9 +516,9 @@
                   "
                 >
                   <img
-                    src="~/assets/img/interface/okexchain.png"
+                    src="~/assets/img/interface/oecchain.svg"
                     alt=""
-                    class="-[90px] h-[15px] md:w-[125px] md:h-[25px]"
+                    class="-[90px] h-[15px] md:w-[125px] md:h-[50px]"
                   />
                 </span>
               </li>
