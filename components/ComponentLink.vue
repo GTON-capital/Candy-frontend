@@ -10,10 +10,10 @@
         : 'a'
     "
     v-bind="{ [route ? 'to' : 'href']: route ? { name: route } : href }"
-    :class="disabled ? 'relative hover:no-underline' : ''"
-  >
+
+    :class="[disabled ? 'relative hover:no-underline' : '']">
     <span
-      v-if="disabled && disabledTitle"
+      v-if="disabled && disabledTitle && !interfaceC"
       class="
         absolute
         top-0
@@ -32,8 +32,20 @@
       {{ disabledTitle }}
     </span>
 
+
     <span :class="disabled ? 'opacity-50' : ''">
-      <slot />
+      <slot/>
+    </span>
+    <span
+      v-if="disabled && disabledTitle && interfaceC"
+      class="
+      px-1
+      text-[10px]
+      font-normal
+       text-magenta
+      "
+    >
+      {{ disabledTitle }}
     </span>
   </component>
 </template>
@@ -58,6 +70,11 @@ export default Vue.extend({
     disabledTitle: {
       type: String,
       default: '',
+    },
+
+    interfaceC: {
+      type: Boolean,
+      default: false,
     },
   },
 })
