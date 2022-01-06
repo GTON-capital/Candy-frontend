@@ -1,8 +1,10 @@
 <template>
   <div class="flex justify-center">
-    <nuxt-link
-      to="/catalog"
+    <button
+      disabled
       class="
+        cursor-auto
+        disabled:opacity-75
         relative
         flex
         justify-center
@@ -19,6 +21,20 @@
     >
       <span
         class="
+          absolute
+          top-[-10px]
+          border-white border
+          rounded-[26px]
+          px-[6px]
+          z-10
+          bg-[#7B1FCB]
+          text-xs
+        "
+      >
+        coming soon
+      </span>
+      <span
+        class="
           text-[13px]
           lg:text-base
           leading-[15px]
@@ -27,9 +43,9 @@
         "
         >LAUNCH APP</span
       >
-    </nuxt-link>
+    </button>
 
-    <button
+    <!-- <button
       class="
         relative
         flex
@@ -69,7 +85,7 @@
         "
         >SIGN UP</span
       >
-    </button>
+    </button> -->
   </div>
 </template>
 

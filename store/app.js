@@ -3,6 +3,7 @@ export const state = () => ({
     open: false,
     landingNavigation: [
       {
+        disabled: true,
         route: 'catalog',
         label: 'Launch APP',
       },

@@ -46,7 +46,22 @@
           }"
           class="px-[31px] font-bold"
         >
-          {{ item.label }}
+          <span
+            class="
+              absolute
+              top-[-20px]
+              border-white border
+              rounded-[26px]
+              px-[6px]
+              z-10
+              bg-[#7B1FCB]
+              text-xs
+            "
+            v-if="item.route"
+          >
+            coming soon
+          </span>
+          <span :disabled="item.route">{{ item.label }}</span>
         </component-link>
       </div>
 
