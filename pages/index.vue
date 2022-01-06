@@ -1,4 +1,4 @@
- <template>
+<template>
   <div class="text-14px text-center">
     <section class="relative mb-[42px] lg:mb-[140px] overflow-hidden">
       <img
@@ -239,7 +239,7 @@
                 lg:mb-[15px] lg:text-[24px] lg-leading-[30px]
               "
             >
-              Stake it at Candyshop
+              Stake it at Candy
             </h3>
             <div
               class="
