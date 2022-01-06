@@ -3,6 +3,7 @@
     <button
       disabled
       class="
+        cursor-auto
         disabled:opacity-75
         relative
         flex
