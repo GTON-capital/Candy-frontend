@@ -2,7 +2,7 @@
   <header class="py-[16px] xl:pt-[53px] xl:pb-[78px]">
     <div class="relative container xl:flex justify-center items-center">
       <div class="relative xl:static flex justify-center items-center">
-        <nuxt-link to="/" class="xl:absolute xl:left-[-50px] xl:top-[-24px]">
+        <nuxt-link to="/" class="xl:absolute xl:left-[50px] xl:top-[-24px]">
           <img
             src="~/assets/img/logo.svg"
             class="w-[134px] h-[79px] xl:w-[171px] xl:h-[101px]"
@@ -48,7 +48,22 @@
           }"
           class="px-[31px] font-bold"
         >
-          {{ item.label }}
+          <span
+            class="
+              absolute
+              top-[-20px]
+              border-white border
+              rounded-[26px]
+              px-[6px]
+              z-10
+              bg-[#7B1FCB]
+              text-xs
+            "
+            v-if="item.route"
+          >
+            coming soon
+          </span>
+          <span :disabled="item.route">{{ item.label }} </span>
         </component-link>
       </div>
     </div>

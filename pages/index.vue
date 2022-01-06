@@ -1,6 +1,38 @@
 <template>
   <div class="text-14px text-center">
     <section class="relative mb-[42px] lg:mb-[140px] overflow-hidden">
+      <div class="container relative">
+        <div
+          class="
+            mb-12
+            m-auto
+            flex
+            justify-center
+            items-center
+            rounded-[10px]
+            border-[1px] border-[#FFF500]
+            py-8
+            md:max-w-[1260px]
+          "
+        >
+          <img
+            src="~/assets/img/landing/warning.svg"
+            alt="suspend"
+            class="hidden lg:block"
+          />
+          <span
+            class="
+              text-warning
+              font-heading
+              leading-[40px]
+              lg:text-[40px]
+              sm:text-[20px]
+              pl-5
+            "
+            >The new website is under construction</span
+          >
+        </div>
+      </div>
       <img
         src="~/assets/img/landing/hero-bg.png"
         alt=""
@@ -189,7 +221,7 @@
             lg:mb-[55px]
           "
         >
-          <li class="flex flex-col max-w-[255px]">
+          <li class="flex flex-col max-w-[270px] min-w-[240px]">
             <h3
               class="
                 mb-[8px]
@@ -229,7 +261,9 @@
               with a stablecoin or any native token
             </p>
           </li>
-          <li class="flex flex-col mt-[22px] max-w-[255px] md:mt-0">
+          <li
+            class="flex flex-col mt-[22px] max-w-[270px] min-w-[240px] md:mt-0"
+          >
             <h3
               class="
                 mb-[8px]
@@ -239,7 +273,7 @@
                 lg:mb-[15px] lg:text-[24px] lg-leading-[30px]
               "
             >
-              Stake it at Candyshop
+              Stake it at Candy
             </h3>
             <div
               class="
@@ -269,7 +303,9 @@
               and withdraw to the wallet at any time
             </p>
           </li>
-          <li class="flex flex-col mt-[22px] max-w-[255px] md:mt-0">
+          <li
+            class="flex flex-col mt-[22px] max-w-[270px] min-w-[240px] md:mt-0"
+          >
             <h3
               class="
                 mb-[8px]
@@ -306,7 +342,7 @@
                 md:max-w-[222px] md:font-bold
               "
             >
-              by simply holding your Candies in the Candyshop bag
+              by simply holding your Candies in the Candy bag
             </p>
           </li>
         </ul>
@@ -575,7 +611,7 @@
                 md:mb-[15px]
               "
             >
-              Launch in Q4 2021
+              Launch in Q2
             </p>
             <p class="text-[15px] font-bold leading-[19px]">
               Used as a governance token
@@ -607,7 +643,7 @@
               Multichain
             </p>
             <p class="text-[15px] font-bold leading-[19px]">
-              ported to 7 chains at launch
+              Ported to 7 chains at launch
             </p>
           </li>
           <li class="mt-[42px] max-w-[266px] md:max-w-[222px] md:mt-0">
@@ -636,7 +672,7 @@
               Liquidity-boosted
             </p>
             <p class="text-[15px] font-bold leading-[19px]">
-              paired to GTON across all established chains and most popular DEXs
+              Paired to GTON across all established chains
             </p>
           </li>
         </ul>
