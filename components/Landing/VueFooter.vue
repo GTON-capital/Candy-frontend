@@ -33,16 +33,14 @@
         />
       </nuxt-link>
 
-      <div class="hidden xl:flex mt-[38px]">
+      <div class="hidden xl:flex mt-[38px] flex items-center">
         <component-link
-          v-for="(item, key) in navigation"
-          :key="key"
-          :route="item.route"
-          :href="item.href"
-          :disabled="item.disabled"
-          :disabled-title="item.disabledTitle"
+          :route="navigation[0].route"
+          :href="navigation[0].href"
+          :disabled="navigation[0].disabled"
+          :disabled-title="navigation[0].disabledTitle"
           :class="{
-            'no-underline hover:underline': $route.name !== item.route,
+            'no-underline hover:underline': $route.name !== navigation[0].route,
           }"
           class="px-[31px] font-bold"
         >
@@ -57,12 +55,25 @@
               bg-[#7B1FCB]
               text-xs
             "
-            v-if="item.route"
+            v-if="navigation[0].route"
           >
             coming soon
           </span>
-          <span :disabled="item.route">{{ item.label }}</span>
+          <span :disabled="navigation[0].route">Lounch APP</span>
         </component-link>
+        <div class="flex items-center my-5 mx-auto justify-center">
+          <div
+            v-for="(social, socialKey) in socials"
+            :key="socialKey"
+            class="text-2xl px-5"
+          >
+            <social-link
+              :href="social.href"
+              :icon="social.icon"
+              class="text-white hover:opacity-50"
+            />
+          </div>
+        </div>
       </div>
 
       <div class="mt-[13px] xl:mt-[31px] text-[13px] leading-[21px]">
@@ -81,6 +92,9 @@ export default Vue.extend({
   computed: {
     navigation() {
       return this.$store.getters['app/menu'].landingNavigation
+    },
+    socials() {
+      return this.$store.getters['app/menu'].socials
     },
   },
 })
